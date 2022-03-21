@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title </title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/myCss/css")
+</head>
+<body>
+    <div class="header-top">
+        <h5>Mau sắm online thuận tiện và dễ dàng</h5>
+        <div class="header-top-div">
+            <img src="~/Image/account.png" />
+            <a href="#">Đăng nhập</a>
+        </div>
+    </div>
+    <div class="header">
+        <h4>Allegorithmic</h4>
+        <div class="sreach-div">
+            <img src="~/Image/search.png" />
+            <input id="input-search" placeholder="Bạn cần tìm gì ?" type="text" />
+            <input id="button-search" value="TÌM KIẾM" type="submit"/>
+        </div>
+        <div class="shopping-box">
+            <div class="shopping-div">
+                <img class="shopping-div-icon" src="~/Image/shopping.png" />
+                <i id="i-shopping"></i>
+                <div class="shopping-div-text">
+                    <p>0 sản phẩm </p>
+                    <p>0 VND</p>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <div class="navigation">
+        <ul>
+            <li>DANH MỤC SẢN PHẨM</li>
+            <li> <img src="~/Image/menu-line.png" /> </li>
+            <li>TRANG CHỦ</li>
+            <li>SẢN PHẨM</li>
+            <li>LIÊN HỆ</li>
+            <li>CHÍNH SÁCH</li>
+        </ul>
+    </div>
+    <div class="banner">
+        <div>
+            <img />
+            <img />
+        </div>
+        <div>
+            <a class="prev" onclick='plusSlides(-1)'>&#10094;</a>
+            <a class="next" onclick='plusSlides(1)'>&#10095;</a>
+        </div>
+        <div class="position-dot">
+            <span class="dot" onclick='currentSlide(1)'></span>
+            <span class="dot" onclick='currentSlide(2)'></span>
+            <span class="dot" onclick='currentSlide(3)'></span>
+            <span class="dot" onclick='currentSlide(4)'></span>
+        </div>
+    </div>
+    <div class="content">
+        @RenderBody()
+    </div>
+
+    <div class="footer">
+
+    </div>
+
+
+</body>
+</html>
